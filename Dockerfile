@@ -1,3 +1,5 @@
-FROM python:3.6
+FROM docker:latest
 
-RUN pip install docker-compose
+RUN apk add --no-cache git git-lfs py-pip bash libffi-dev python2-dev libressl-dev musl-dev make gcc openssl-dev libc-dev make
+
+RUN pip install --no-cache-dir docker-compose
